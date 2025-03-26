@@ -20,7 +20,7 @@ By following this guide, you will learn how to:
 1. **Download the Compose File**:
     - Download the Docker Compose file and configuration:
       ```bash
-        git clone https://github.com/open-edge-platform/edge-ai-suites
+        git clone https://github.com/intel/metro-ai-suite.git
       ```
 
 2. **Navigate to the Directory**:
@@ -43,7 +43,7 @@ By following this guide, you will learn how to:
 
 4. **Update Dashboard with your Host IP Address and Use Case**
     ```bash
-        ./update_dashboard
+        ./update_dashboard.sh
     ```
 
 5. **Download the Model and Video files**
