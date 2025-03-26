@@ -5,7 +5,6 @@
 -->
 **Operating Systems**
 - Ubuntu 24.04 LTS 
-- Ubuntu 22.04 LTS
 
 **Hardware Platforms**
 - Intel® Core™ processors (i5 or higher)
@@ -23,7 +22,7 @@
 
 **Required Software**:
 - Docker 24.0 or higher 
-- Python 3.8+
+- Python 3.12
 - Git
 
 ## Compatibility Notes
