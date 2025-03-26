@@ -22,7 +22,7 @@
 
 **Required Software**:
 - Docker 24.0 or higher 
-- Python 3.12
+- Python 3.10+
 - Git
 
 ## Compatibility Notes
