@@ -7,6 +7,7 @@ This guide is ideal for developers who want to work directly with the source cod
 
 
 **Build and Start the Tool**:
+   - Follow the steps in [How to Build from Source](./how-to-build-source.md)
    - Run:
      ```bash
       docker compose exec videogenerator python3 imagetovideo.py
