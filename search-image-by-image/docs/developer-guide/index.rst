@@ -18,6 +18,7 @@ This guide is designed to help developers understand the architecture, setup, an
 .. toctree::
    :caption: How to
 
+   how-to-build-source
    how-to-deploy-helm
 
 .. toctree::
