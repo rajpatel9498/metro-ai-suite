@@ -9,22 +9,19 @@ By leveraging cutting-edge technologies and pre-trained deep learning models, th
 
 
 .. toctree::
-   :maxdepth: 2
    :caption: Get Started
 
-   Overview <Overview>
+   Overview
    system-requirements
    get-started
    release-notes
 
 .. toctree::
-   :maxdepth: 2
    :caption: How to
 
-   how-to-use-customize-application
+   how-to-customize-application
 
 .. toctree::
-   :maxdepth: 2
    :caption: Community and Support
    
    support

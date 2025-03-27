@@ -26,5 +26,6 @@ This guide is designed to you build and use the tool.
    :maxdepth: 2
    :caption: Community and Support
    
+   disclaimers
    support
 

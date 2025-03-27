@@ -62,19 +62,3 @@ The Visual Pipeline and Platform Evaluation Tool integrates with AI-based video 
 **Performance Evaluation**: Collect hardware performance metrics, including CPU/GPU usage, power consumption, and thermal data.
 
 **Visualization & Analysis**: View real-time performance metrics on the dashboard to compare configurations and optimize settings.
-
-## Minimum System Requirements
-
-<!--
-**Guidelines for Authors**:
-- Specify minimum and recommended hardware/software requirements.
-- Clearly distinguish between required dependencies and optional configurations.
--->
-
-### Minimum system requirements
-
-- **Processor:** Intel® 11th Gen Core™ i5 or higher
-- **Memory:** 8 GB
-- **Disk space:** 256 GB SSD
-- **GPU/Accelerator:** Intel® UHD Graphic
-- **Operating system:** Ubuntu 24.04 LTS

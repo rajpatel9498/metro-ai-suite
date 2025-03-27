@@ -57,7 +57,7 @@ The system follows a modular architecture:
 
 EVAM (Edge Video Analytics Microservice) is a powerful tool designed to process video feeds directly on edge devices. It leverages GStreamer pipelines and OpenVINO-optimized AI models to perform real-time object detection and tracking, minimizing latency and reducing bandwidth consumption.
 
-![Pipeline Architecture](_static/pipeline.png)
+![Pipeline Architecture](_images/pipeline.png)
 
 ### 3.2. Key EVAM Components <a name="key-evam-components"></a>
 
@@ -129,9 +129,9 @@ To share the results of the video analysis with other parts of your system, EVAM
 
 Node-RED is a flow-based programming tool that lets you visually wire together devices, APIs, and online services. This guide demonstrates how Node-RED can be used to process video analytics data from EVAM for tasks such as object tracking and loitering detection. Using a drag-and-drop interface, you can build complex workflows with minimal coding, making it ideal for no-code/low-code environments.
 
-![Node-RED Flow 1](_static/node-red1.png)
+![Node-RED Flow 1](_images/node-red1.png)
 
-![Node-RED Flow 2](_static/node-red2.png)
+![Node-RED Flow 2](_images/node-red2.png)
 
 ### 4.1. Overview of the Node-RED Flow <a name="overview-of-the-node-red-flow"></a>
 
@@ -307,7 +307,7 @@ Node-RED is a flow-based programming tool that lets you visually wire together d
 
 > For detailed Grafana documentation, visit the [Official Grafana Documentation](https://grafana.com/docs/)
 
-![Grafana Dashboard](_static/grafana.png)
+![Grafana Dashboard](_images/grafana.png)
 
 ### 5.1. Overview of Grafana <a name="overview-of-grafana"></a>
 
@@ -355,24 +355,8 @@ Grafana is a powerful, open-source visualization tool that helps you create dyna
 
 ## 6. End-to-End Integration <a name="end-to-end-integration"></a>
 
-```ascii
-+-------------+     +----------------+     +--------------+
-|   Cameras   | --> |      EVAM      | --> | MQTT Broker  |
-+-------------+     |  (Edge Device) |     +--------------+
-                    +----------------+            |
-                          ^                       |
-                          |                       v
-                    +-----------------+    +--------------+
-                    |  OpenVINO AI    |    |   Node-RED   |
-                    |    Models       |    |   Flows      |
-                    +-----------------+    +--------------+
-                                                 |
-                                                 v
-                                         +-----------------+
-                                         |    Grafana      |
-                                         |   Dashboards    |
-                                         +-----------------+
-```
+![Integration Diagram](_images/integration.png)
+
 
 The system operates as follows:
 

@@ -1,11 +1,11 @@
 
 # Get Started
 
-The Smart Parking application uses AI-driven video analytics to optimize parking management. It provides a modular architecture that integrates seamlessly with various input sources and leverages AI models to deliver accurate and actionable insights.
+Loitering Detection leverages advanced AI algorithms to monitor and analyze real-time video feeds, identifying individuals lingering in designated areas. It provides a modular architecture that integrates seamlessly with various input sources and leverages AI models to deliver accurate and actionable insights.
 
 By following this guide, you will learn how to:
 - **Set up the sample application**: Use Docker Compose to quickly deploy the application in your environment.
-- **Run a predefined pipeline**: Execute a pipeline to see smart parking application in action.
+- **Run a predefined pipeline**: Execute a pipeline to see loitering detection in action.
 
 ## Prerequisites
 - Verify that your system meets the [minimum requirements](./system-requirements.md).
@@ -26,7 +26,7 @@ By following this guide, you will learn how to:
 2. **Navigate to the Directory**:
     - Go to the directory where you saved the Compose file:
       ```bash
-      cd edge-ai-suites/metro-ai-suite/smart-parking/
+      cd edge-ai-suites/metro-ai-suite/loitering-detection/
       ```
 
 3. **Update the IP Address**:
@@ -79,7 +79,7 @@ By following this guide, you will learn how to:
         ```
     - **Expected Results**:
     - The dashboard displays detected cars.
-    - ![Dashboard Example](_static/grafana.png)
+    - ![Dashboard Example](_images/grafana.png)
 
 ## Stop the Containers
 

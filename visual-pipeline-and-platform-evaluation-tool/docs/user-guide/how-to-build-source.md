@@ -8,7 +8,7 @@ Build the ViPPET (Visual Pipeline and Platform Evaluation Tool) from source to c
 
 This guide is ideal for developers who want to work directly with the source code.
 
-### Prerequisites
+## Prerequisites
 
 Before you begin, ensure the following:
 - **System Requirements**: Verify your system meets the [minimum requirements](./system-requirements.md).

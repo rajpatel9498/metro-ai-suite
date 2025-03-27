@@ -1,11 +1,13 @@
-# Loitering Detection
-Effortlessly monitor and manage areas with AI-driven video analytics for real-time insights and enhanced security.
+# Smart Parking
+Effortlessly manage parking spaces with AI-driven video analytics for real-time insights and enhanced efficiency.
 
 ## Overview
 
-Loitering Detection leverages advanced AI algorithms to monitor and analyze real-time video feeds, identifying individuals lingering in designated areas. By proactively detecting suspicious behavior, this system helps to address potential security threats effectively.
+The Smart Parking application uses AI-driven video analytics to optimize parking management. It identifies and counts available parking spaces in real-time, ensuring accurate detection of empty slots. By continuously monitoring parking areas, it tracks changes in occupancy and provides up-to-date information on parking availability.
 
-By utilizing cutting-edge technologies and pre-trained deep learning models, this application enables real-time processing and analysis of video streams, making it an ideal solution. Its modular architecture and integration capabilities ensure that users can easily customize and extend its functionalities to meet their specific needs.
+This solution also records the status of occupied parking spaces, enabling efficient utilization and reporting. Designed to enhance parking efficiency, the application improves user experience by delivering real-time insights into parking operations.
+
+By leveraging cutting-edge technologies and pre-trained deep learning models, this application enables real-time processing and analysis of video streams, making it an ideal solution. Built on a modular architecture and integration capabilities ensure that users can easily customize and extend its functionalities to meet their specific needs.
 
 ### Key Features
 
@@ -17,7 +19,7 @@ By utilizing cutting-edge technologies and pre-trained deep learning models, thi
 
 The architecture is designed to facilitate seamless integration and operation of various components involved in AI-driven video analytics.
 
-![Architecture Diagram](_static/arch.png)
+![Architecture Diagram](_images/arch.png)
 
 ### Components
 
@@ -31,23 +33,3 @@ The architecture is designed to facilitate seamless integration and operation of
 The Edge Video Analytics Microservice (EVAM) is a core component, designed to handle video analytics at the edge. It leverages pre-trained deep learning models to perform tasks such as object detection, classification, and tracking in real-time. EVAM is highly configurable, allowing users to adjust parameters like detection thresholds and object types to suit specific use cases. This flexibility ensures that users can deploy AI-driven video analytics solutions quickly and efficiently, without the need for extensive coding or deep learning expertise.
 
 It integrates various components such as MQTT, Node-RED, and Grafana to provide a robust and flexible solution for real-time video inference pipelines. The tool is built to be user-friendly, allowing customization without the need for extensive coding knowledge. Validate your ideas by developing an end-to-end solution faster.
-
-### **Hardware Requirements**
-| Component  | Minimum Requirement                |
-|------------|------------------------------------|
-| CPU        | Intel® 11th Gen Core™ i5 or higher |
-| GPU        | Intel® UHD Graphic                 |
-| RAM        | 16 GB                               |
-| Storage    | 50 GB free space                   |
-
-
-### **Software Requirements**
-| Requirement  | Details      |
-|--------------|--------------|
-| Supported OS | Ubuntu 24.04 |
-| Dependencies | Docker 20.10 |
-
-
-## Next Steps
-- [Get Started](get-started.md)
-- [System Requirements](system-requirements.md)
