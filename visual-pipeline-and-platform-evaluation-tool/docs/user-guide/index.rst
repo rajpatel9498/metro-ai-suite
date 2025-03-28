@@ -23,6 +23,11 @@ This guide is designed to you build and use the tool.
    how-to-use-video-generator
 
 .. toctree::
+   :caption: Source Code
+
+   GitHub <https://github.com/intel/metro-ai-suite/tree/main/visual-pipeline-and-platform-evaluation-tool>
+
+.. toctree::
    :maxdepth: 2
    :caption: Community and Support
    
