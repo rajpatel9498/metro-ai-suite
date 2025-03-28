@@ -33,3 +33,11 @@ The application includes a demonstration video for testing. The video loops cont
 - Matched search results, including metadata, timestamps, confidence scores, and frames
 
 ![Screenshot of the Search Image by Image sample application interface displaying search input and matched results](docs/user-guide/_images/imagesearch2.png)
+
+## Learn More
+- [System Requirements](docs/user-guide/system-requirements.md)
+- [Get Started](docs/user-guide/get-started.md)
+- [Architecture Overview](docs/user-guide/overview-architecture.md)
+- [How to Build Source](docs/user-guide/how-to-build-source.md)
+- [How to Deploy Helm](docs/user-guide/how-to-deploy-helm.md)
+- [Release Notes](docs/user-guide/release-notes.md)

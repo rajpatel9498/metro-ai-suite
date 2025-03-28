@@ -62,3 +62,10 @@ The Visual Pipeline and Platform Evaluation Tool integrates with AI-based video 
 **Performance Evaluation**: Collect hardware performance metrics, including CPU/GPU usage, power consumption, and thermal data.
 
 **Visualization & Analysis**: View real-time performance metrics on the dashboard to compare configurations and optimize settings.
+
+## Learn More
+- [System Requirements](docs/user-guide/system-requirements.md)
+- [Get Started](docs/user-guide/get-started.md)
+- [How to Build Source](docs/user-guide/how-to-build-source.md)
+- [How to use Video Generator ](docs/user-guide/how-to-use-video-generator.md)
+- [Release Notes](docs/user-guide/release-notes.md)

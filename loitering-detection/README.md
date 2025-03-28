@@ -31,3 +31,9 @@ The architecture is designed to facilitate seamless integration and operation of
 The Edge Video Analytics Microservice (EVAM) is a core component, designed to handle video analytics at the edge. It leverages pre-trained deep learning models to perform tasks such as object detection, classification, and tracking in real-time. EVAM is highly configurable, allowing users to adjust parameters like detection thresholds and object types to suit specific use cases. This flexibility ensures that users can deploy AI-driven video analytics solutions quickly and efficiently, without the need for extensive coding or deep learning expertise.
 
 It integrates various components such as MQTT, Node-RED, and Grafana to provide a robust and flexible solution for real-time video inference pipelines. The tool is built to be user-friendly, allowing customization without the need for extensive coding knowledge. Validate your ideas by developing an end-to-end solution faster.
+
+## Learn More
+- [System Requirements](docs/user-guide/system-requirements.md)
+- [Get Started](docs/user-guide/get-started.md)
+- [How to customize application](docs/user-guide/how-to-customize-application.md)
+- [Release Notes](docs/user-guide/release-notes.md)
