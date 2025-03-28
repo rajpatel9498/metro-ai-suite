@@ -22,6 +22,11 @@ This guide is designed to help developers understand the architecture, setup, an
    how-to-deploy-helm
 
 .. toctree::
+   :caption: Source Code
+
+   GitHub <https://github.com/intel/metro-ai-suite/tree/main/search-image-by-image>
+
+.. toctree::
    :caption: Support and Community
 
    support
