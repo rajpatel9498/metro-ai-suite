@@ -26,7 +26,7 @@ By following this guide, you will learn how to:
 2. **Navigate to the Directory**:
     - Go to the directory where you saved the Compose file:
       ```bash
-      cd edge-ai-suites/metro-ai-suite/loitering-detection/
+      cd metro-ai-suite/loitering-detection/
       ```
 
 3. **Update the IP Address**:
