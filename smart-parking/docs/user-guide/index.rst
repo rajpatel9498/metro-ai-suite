@@ -22,6 +22,11 @@ By leveraging cutting-edge technologies and pre-trained deep learning models, th
    how-to-customize-application
 
 .. toctree::
+   :caption: Source Code
+
+   GitHub <https://github.com/intel/metro-ai-suite/tree/main/smart-parking>
+
+.. toctree::
    :caption: Community and Support
    
    support
