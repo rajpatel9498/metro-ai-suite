@@ -20,6 +20,11 @@ By utilizing cutting-edge technologies and pre-trained deep learning models, thi
    how-to-customize-application
 
 .. toctree::
+   :caption: Source Code
+
+   GitHub <https://github.com/intel/metro-ai-suite/tree/main/loitering-detection>
+
+.. toctree::
    :caption: Community and Support
    
    support
