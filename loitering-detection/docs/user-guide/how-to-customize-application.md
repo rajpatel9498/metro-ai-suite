@@ -1,4 +1,4 @@
-# Comprehensive Application
+# Customize Application
 
 **Table of Contents**
 
