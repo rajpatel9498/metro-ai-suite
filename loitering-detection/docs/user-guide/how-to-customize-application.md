@@ -1,5 +1,4 @@
-
-# Comprehensive Guide to Object Tracking and Loitering Detection with EVAM, Node-RED, and Grafana
+# Comprehensive Application
 
 **Table of Contents**
 
