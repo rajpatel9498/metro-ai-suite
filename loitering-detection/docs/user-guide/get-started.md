@@ -127,4 +127,4 @@ By following this guide, you will learn how to:
 
 ## Supporting Resources
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Edge Video Analytics Microservice](https://github.com/dlstreamer/pipeline-server)
+- [Deep Learning Streamer Pipeline Server](https://github.com/dlstreamer/pipeline-server)
