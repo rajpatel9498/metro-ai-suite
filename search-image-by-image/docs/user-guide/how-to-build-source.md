@@ -24,7 +24,7 @@ Before you begin, ensure the following:
     ```
     docker pull docker.io/library/node:23
     docker pull docker.io/library/python:3.11
-    docker pull docker.io/intel/dlstreamer:2024.2.2-ubuntu24
+    docker pull docker.io/intel/dlstreamer:2025.0.1.2-ubuntu24
     docker pull openvino/ubuntu22_dev:2024.6.0
     ```
 
@@ -46,7 +46,7 @@ Before you begin, ensure the following:
 3. **Download Models**:
    - For Linux:
      ```sh
-     MODELS_PATH="$(pwd)/src/evam/models"
+     MODELS_PATH="$(pwd)/src/dlstreamer-pipeline-server/models"
 
      docker run --rm \
          -v $MODELS_PATH:/output \
@@ -65,7 +65,7 @@ Before you begin, ensure the following:
 
    - For Windows:
      ```ps1
-     $MODELS_PATH="$PWD\src\evam\models"
+     $MODELS_PATH="$PWD\src\dlstreamer-pipeline-server\models"
 
      docker run --rm `
          -v ${MODELS_PATH}:/output `
@@ -95,7 +95,7 @@ Before you begin, ensure the following:
      - Stream UI: [http://localhost:8889/stream](http://localhost:8889/stream)
      - App UI: [http://localhost:3000](http://localhost:3000)
      - Search UI: [http://localhost:9000/docs](http://localhost:9000/docs)
-     - Milvus UI: [http://localhost:8000](http://localhost:8000)
+     - MilvusDB UI: [http://localhost:8000](http://localhost:8000)
 
 3. **Verify Build Success**:
    - Check the logs. Look for confirmation messages indicating the microservice started successfully.

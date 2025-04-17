@@ -101,11 +101,9 @@ a pre-step to prepare models may be needed
       ```bash
         curl -L -o embedEtcd.yaml "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/milvus-db/embedEtcd.yaml"
         curl -L -o user.yaml "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/milvus-db/user.yaml"
-        curl -L -o config.json "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/evam/configs/filter-pipeline/config.json"
-        curl -L -o mqtt_publisher.py "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/evam/user_scripts/gvapython/mqtt_publisher/mqtt_publisher.py"
+        curl -L -o config.json "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/dlstreamer-pipeline-server/configs/filter-pipeline/config.json"
         curl -L -o mosquitto.conf "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/broker/mosquitto.conf"
-        curl -L -o ./models/person-vehicle-bike-detection-2004/person-vehicle-bike-detection-2004.json "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/evam/models/person-vehicle-bike-detection-2004/person-vehicle-bike-detection-2004.json"
-        curl -L -o ./models/resnet-50-pytorch/resnet-50-pytorch.json "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/evam/models/resnet-50-pytorch/resnet-50-pytorch.json"
+        curl -L -o ./models/person-vehicle-bike-detection-2004/person-vehicle-bike-detection-2004.json "https://raw.githubusercontent.com/intel/metro-ai-suite/refs/heads/main/search-image-by-image/src/dlstreamer-pipeline-server/models/person-vehicle-bike-detection-2004/person-vehicle-bike-detection-2004.json"
       ```
 
 4. **Start the Application**:
@@ -117,7 +115,7 @@ a pre-step to prepare models may be needed
 5. **Verify the Application**:
     - Check that the application is running:
       ```bash
-      docker ps
+      docker compose ps
       ```
 
 6. **Access the Application**:
@@ -125,7 +123,7 @@ a pre-step to prepare models may be needed
       - Stream UI: `http://localhost:8889/stream`
       - App UI: `http://localhost:3000`
       - Search UI: `http://localhost:9000/docs`
-      - Milvus UI: `http://localhost:8000/`
+      - MilvusDB UI: `http://localhost:8000/`
 
 
 7. **Run the Application**:
@@ -135,10 +133,11 @@ a pre-step to prepare models may be needed
 
     - **Expected Results**:
       - Matched search results, including metadata, timestamps, distance to show the confidence rate of the prediction, and frames that include detected objects (e.g., vehicles, pedestrians, bikes).
-    <div align="center">
-        <img src="./_images/imagesearch1.png" width="45%" style="margin-right:1rem"/>
-        <img src="./_images/imagesearch2.png" width="45%" />
-    </div>
+    
+   | ![image1](./_images/imagesearch1.png) | ![image2](./_images/imagesearch2.png) |
+    |--------------------------------|--------------------------------|
+
+
 <!--
 
 **Modify Basic Parameters**: Explain configurable options and their impacts.
@@ -202,7 +201,7 @@ a pre-step to prepare models may be needed
 
     - To use your own models instead of the default models, follow these steps:
 
-      - Open the `config.json` file located at `src/evam/configs/filter-pipeline/config.json`.
+      - Open the `config.json` file.
 
       - Change the paths in the `pipeline` section to point to your own models. Replace the paths for `gvadetect` and `gvaclassify` with the paths to your models:
         ```json
@@ -217,27 +216,18 @@ a pre-step to prepare models may be needed
                         "name": "filter-pipeline",
                         "source": "gstreamer",
                         "queue_maxsize": 50,
-                        "pipeline": "{auto_source} name=source ! decodebin ! video/x-raw ! videoconvert ! gvadetect model=/models/your-detection-model/FP32/your-detection-model.xml model-proc=/models/your-detection-model/your-detection-model.json inference-interval=3 threshold=0.4 device=AUTO ! gvaclassify model=/models/your-classification-model/FP32/your-classification-model.xml model-proc=/models/your-classification-model/your-classification-model.json name=classification ! queue ! videoconvertscale ! gvametaconvert name=metaconvert ! gvapython class=MQTTPublisher function=process module=/home/pipeline-server/gvapython/mqtt_publisher/mqtt_publisher.py name=mqtt_publisher ! gvametapublish ! appsink name=destination",
-                        "parameters": {
-                            "type": "object",
-                            "properties": {
-                                "mqtt_publisher": {
-                                    "element": {
-                                        "name": "mqtt_publisher",
-                                        "property": "kwarg",
-                                        "format": "json"
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        },
-                        "auto_start": false
+                        "pipeline": "{auto_source} name=source ! decodebin ! video/x-raw ! videoconvert ! gvadetect model=/models/your-detection-model/FP32/your-detection-model.xml model-proc=/models/your-detection-model/your-detection-model.json inference-interval=3 threshold=0.4 model-instance-id=detect1 device=CPU ! queue ! gvainference model=/models/your-classification-model/FP32/your-classification-model.xml inference-region=1 name=classification model-instance-id=infer1 device=CPU ! queue ! videoconvertscale ! gvametaconvert add-tensor-data=true name=metaconvert ! jpegenc ! appsink name=destination",
+                        "auto_start": false,
+                        "mqtt_publisher": {
+                            "publish_frame": true,
+                            "topic": "edge_video_analytics_results"
+                        }
                     },
                     {
                         "name": "search_image",
                         "source": "image_ingestor",
                         "queue_maxsize": 50,
-                        "pipeline": "appsrc name=source  ! decodebin ! videoconvert ! gvainference model=/models/your-classification-model/FP32/your-classification-model.xml device=CPU ! gvametaconvert ! appsink name=destination"
+                        "pipeline": "appsrc name=source  ! decodebin ! videoconvert ! gvainference model=/models/your-classification-model/FP32/your-classification-model.xml model-instance-id=infer2 device=CPU ! gvametaconvert add-tensor-data=true ! appsink name=destination"
                     }
                 ]
             }
@@ -280,7 +270,7 @@ a pre-step to prepare models may be needed
 4. **Save Changes and Restart**:
    - Save the file and restart the application:
      ```bash
-     docker-compose restart
+     docker compose restart
      ```
 
 5. **Verify Updates**:
@@ -290,7 +280,7 @@ a pre-step to prepare models may be needed
    - Confirm changes through:
      - Logs:
        ```bash
-       docker-compose logs
+       docker compose logs
        ```
 
 
@@ -299,7 +289,7 @@ a pre-step to prepare models may be needed
 1. **Containers Not Starting**:
    - Check the Docker logs for errors:
      ```bash
-     docker-compose logs
+     docker compose logs
      ```
 2. **Port Conflicts**:
    - Update the `ports` section in the Compose file to resolve conflicts.
