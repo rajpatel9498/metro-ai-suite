@@ -49,7 +49,7 @@ The system follows a modular architecture:
 *   **Node-RED:** Consumes object tracking data from the Pipeline Server, performs further analysis (like calculating distances), and publishes results.
 *   **Grafana:** Visualizes the processed data from Node-RED (or a database fed by Node-RED), providing real-time dashboards.
 
-## 3. Deep Learning Streamer Pipeline Server <a name="#dlsps-dl-streamer-pipeline-server">evam-</a>
+## 3. Deep Learning Streamer Pipeline Server <a name="#dlsps-dl-streamer-pipeline-server"></a>
 
 > For detailed documentation onDeep Learning Streamer Pipeline Server, visit the [Intel Deep Learning Streamer Pipeline Server Documentation](https://github.com/dlstreamer/pipeline-server)
 
