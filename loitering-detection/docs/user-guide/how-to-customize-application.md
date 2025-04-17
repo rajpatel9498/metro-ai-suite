@@ -51,7 +51,7 @@ The system follows a modular architecture:
 
 ## 3. Deep Learning Streamer Pipeline Server <a name="dlsps"></a>
 
-> For detailed documentation on the Pipeline Server, visit the [Deep Learning Streamer Pipeline Server Documentation](https://eiidocs.intel.com/IEdgeInsights/EdgeVideoAnalyticsMicroservice/eii/README.html)
+> For detailed documentation on the Pipeline Server, visit the [Deep Learning Streamer Pipeline Server Documentation](https://github.com/dlstreamer/pipeline-server)
 
 ![Pipeline Architecture](_images/pipeline.png)
 
