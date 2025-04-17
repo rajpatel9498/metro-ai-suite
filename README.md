@@ -4,7 +4,7 @@ This repo contains selected elements of Intel® Tiber™ Metro AI Suite availabl
 
 - [**Visual Pipeline and Platform Evaluation Tool**](visual-pipeline-and-platform-evaluation-tool/)
 This GUI tool simplifies hardware selection for AI workloads by allowing you to configure workload parameters, benchmark performance, and analyze key metrics such as throughput, CPU, and GPU usage.
-- [**Search Image by Image**](search-image-by-image)
+- [**Image-Based Video Search**](search-image-by-image)
 This application performs near real-time analysis and image-based search to detect and retrieve objects of interest in large video datasets.
 
 - [**Loitering Detection**](loitering-detection)
